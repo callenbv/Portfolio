@@ -11,10 +11,11 @@
 }
 
 .header.scrolled {
-  background: rgba(10, 10, 15, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
   padding: 15px 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-container {
@@ -37,10 +38,7 @@
 }
 
 .logo-text {
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .logo-dot {
@@ -48,18 +46,6 @@
   height: 8px;
   background: var(--accent-primary);
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.2);
-  }
 }
 
 .nav {
@@ -84,7 +70,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gradient-1);
+  background: var(--accent-primary);
   transition: width 0.3s ease;
 }
 
@@ -162,7 +148,7 @@
     justify-content: center;
     gap: 30px;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid var(--border-color);
   }
 
   .nav.open {

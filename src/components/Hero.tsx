@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import './Hero.css'
 
 const Hero = () => {
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -35,13 +36,14 @@ const Hero = () => {
           animate="visible"
         >
           <motion.h1 className="hero-title" variants={itemVariants}>
-            <span className="gradient-text-start">Programmer</span>
+            <span className="gradient-text-start">Engineer,</span>
             <br />
-            <span className="gradient-text-end">& Game Designer</span>
+            <span className="gradient-text-end">Developer.</span>
+            <span className="terminal-cursor">|</span>
           </motion.h1>
 
           <motion.p className="hero-description" variants={itemVariants}>
-            Building innovative software solutions and crafting engaging game experiences
+            Building games, software, and engaging games anyone can play.
           </motion.p>
 
           <motion.div className="hero-buttons" variants={itemVariants}>
@@ -142,22 +144,6 @@ const Hero = () => {
         <div className="mouse"></div>
       </motion.div>
 
-      <div className="hero-background">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${10 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
-      </div>
     </section>
   )
 }
