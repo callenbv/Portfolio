@@ -1,0 +1,11 @@
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: var(--bg-primary);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}

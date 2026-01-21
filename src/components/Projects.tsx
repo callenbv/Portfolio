@@ -111,7 +111,15 @@ const Projects = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div className="section-header" variants={itemVariants}>
-          <h2 className="section-title">Projects</h2>
+          <motion.h2 
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
+            Projects
+          </motion.h2>
         </motion.div>
 
         <div className="projects-grid">

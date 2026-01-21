@@ -85,66 +85,78 @@ const Hero = () => {
                 <span className="dot dot-yellow"></span>
                 <span className="dot dot-green"></span>
               </div>
-              <span className="code-filename">portfolio.ts</span>
+              <span className="code-filename">callen_betts.cpp</span>
             </div>
             <div className="code-content">
               <div className="code-line">
-                <span className="code-keyword">const</span>{' '}
-                <span className="code-function">createPortfolio</span> = () =&gt; {'{'}
+                <span className="code-comment">// Backend engineer & game developer</span>
               </div>
               <div className="code-line">
-                <span className="code-indent">  </span>
-                <span className="code-keyword">const</span> skills = [
+                <span className="code-keyword">#include</span> <span className="code-string">&lt;iostream&gt;</span>
               </div>
               <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-string">'TypeScript'</span>,
+                <span className="code-keyword">#include</span> <span className="code-string">&lt;vector&gt;</span>
+              </div>
+              <div className="code-line"></div>
+              <div className="code-line">
+                <span className="code-keyword">int</span> <span className="code-function">main</span>() {'{'}
               </div>
               <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-string">'React'</span>,
+                {'    '}
+                <span className="code-keyword">std::</span><span className="code-type">vector</span>&lt;<span className="code-type">string</span>&gt; skills = {'{'}
               </div>
               <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-string">'Game Design'</span>,
+                {'        '}
+                <span className="code-string">&quot;C++&quot;</span>,
               </div>
               <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-string">'Problem Solving'</span>
+                {'        '}
+                <span className="code-string">&quot;Game Development&quot;</span>,
               </div>
               <div className="code-line">
-                <span className="code-indent">  </span>];
+                {'        '}
+                <span className="code-string">&quot;Backend Systems&quot;</span>
               </div>
               <div className="code-line">
-                <span className="code-indent">  </span>
-                <span className="code-keyword">return</span> {'{'}
+                {'    '}{'}'};
+              </div>
+              <div className="code-line"></div>
+              <div className="code-line">
+                {'    '}
+                <span className="code-keyword">return</span> <span className="code-number">0</span>;
               </div>
               <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-property">projects</span>: <span className="code-function">build</span>(),
-              </div>
-              <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-property">passion</span>: <span className="code-function">innovate</span>(),
-              </div>
-              <div className="code-line">
-                <span className="code-indent">    </span>
-                <span className="code-property">future</span>: <span className="code-function">explore</span>()
-              </div>
-              <div className="code-line">
-                <span className="code-indent">  </span>{'}'};
-              </div>
-              <div className="code-line">
-                {'}'};
+                {'}'}
               </div>
             </div>
           </div>
         </motion.div>
       </div>
 
+      <motion.div
+        className="scroll-indicator"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ opacity: { duration: 0.6, delay: 0.8 }, y: { duration: 2, repeat: Infinity, delay: 1 } }}
+      >
+        <div className="mouse"></div>
+      </motion.div>
+
       <div className="hero-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${10 + Math.random() * 10}s`,
+            }}
+          />
+        ))}
       </div>
     </section>
   )
