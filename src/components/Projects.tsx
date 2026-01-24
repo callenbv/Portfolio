@@ -113,12 +113,27 @@ const Projects = () => {
         <motion.div className="section-header" variants={itemVariants}>
           <motion.h2 
             className="section-title"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            Projects
+            {'Projects'.split('').map((char, index) => (
+              <motion.span
+                key={index}
+                className="title-letter"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
           </motion.h2>
         </motion.div>
 
